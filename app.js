@@ -53,4 +53,4 @@ try {
     console.log(error);
 }
 
-app.listen(8000, () => console.log("Rodando na porta 8000"))
+app.listen(process.env.PORT | 8000, () => console.log(`Rodando na porta ${process.env.PORT}`))
