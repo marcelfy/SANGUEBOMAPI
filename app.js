@@ -39,13 +39,13 @@ try {
     
     await Associations()
 
-    await AgendamentoModel.sync()
+    await PerfilModel.sync()
     await UsuarioModel.sync()
     await HemocentroModel.sync()
+    await DoacaoModel.sync()
+    await AgendamentoModel.sync()
     await CampanhaModel.sync()
     await EstoqueSangueModel.sync()
-    await DoacaoModel.sync()
-    await PerfilModel.sync()
 
 
     console.log("Conexão feita com sucesso!")

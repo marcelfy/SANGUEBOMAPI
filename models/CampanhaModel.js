@@ -20,6 +20,11 @@ const CampanhaModel = db.define('Campanha', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    hemocentroID:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        foreignKey: true,
+    },
     ativo:{
         type: DataTypes.BOOLEAN,
         allowNull: false
