@@ -1,10 +1,13 @@
 import CampanhaModel from '../models/CampanhaModel.js';
+import HemocentroModel from '../models/HemocentroModel.js'
 
 const CampanhaController = {
 
     async get(req, res) {
         try {
-            const campanha = await CampanhaModel.findAll();
+            const campanha = await CampanhaModel.findAll({
+                include:[HemocentroModel]
+            });
             return campanha.length > 0 ? res.status(200).json(campanha) :
                 res.status(204).send();
 
