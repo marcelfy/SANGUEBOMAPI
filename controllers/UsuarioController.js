@@ -56,8 +56,7 @@ const UsuarioController = {
     async put(req, res) {
         try {
             await UsuarioModel.update(req.body, { where: { usuarioID: req.body.usuarioID } });
-            return res.status(204).send();
-
+            return res.status(200).json({success:true , message:"Usuario editado com sucesso"});
         } catch (error) {
             return res.json({ message: error.message })
         }
