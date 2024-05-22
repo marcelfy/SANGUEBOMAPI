@@ -77,7 +77,7 @@ const UsuarioController = {
         try {
             const usuario = await UsuarioModel.findOne({
                 where: { email: req.body.email },
-                include: [PerfilModel]
+                include: PerfilModel
             })
 
             if (usuario === null) {

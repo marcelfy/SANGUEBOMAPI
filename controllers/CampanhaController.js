@@ -6,7 +6,7 @@ const CampanhaController = {
     async get(req, res) {
         try {
             const campanha = await CampanhaModel.findAll({
-                include:[HemocentroModel]
+                include: HemocentroModel
             });
             return campanha.length > 0 ? res.status(200).json(campanha) :
                 res.status(204).send();
